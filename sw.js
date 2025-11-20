@@ -1,1 +1,0 @@
-const CACHE_NAME="shopping-wrapped-v1",ASSETS=["./","./index.html","./main.bundle.js"];self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE_NAME).then(e=>e.addAll(ASSETS)))}),self.addEventListener("fetch",e=>{e.respondWith(caches.match(e.request).then(t=>t||fetch(e.request)))});
